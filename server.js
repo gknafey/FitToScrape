@@ -6,7 +6,7 @@ var cheerio = require("cheerio");
 
 var db = require("./models");
 
-var PORT = 3000;
+var PORT = process.env.PORT || 3000;
 
 var app = express();
 
@@ -22,12 +22,6 @@ mongoose.connect(MONGODB_URI);
 app.get("/scrape", function(req, res) {
     axios.get("https://www.thetimesinplainenglish.com").then(function(response) {
         var $ = cheerio.load(response.data);
-
-        // $("div").each(function(i, element) {
-        //     var item = {};
-
-        //     summary = $(this).children("p").text();
-        // })
 
         console.log(response.data);
         $("div h2").each(function(i, element) {
