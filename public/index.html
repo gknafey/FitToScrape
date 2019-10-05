@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Scrape Assignment</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <style>
+        body {
+            background: url("city2.jpeg") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+
+        #articles {
+            display: inline-block;
+            overflow: auto;
+            /* width: 50%; */
+            height: 700px;
+        }
+
+        #holder {
+            margin: 20px 0px 40px 10px;
+            width: 50%;
+            border-radius: 10px;
+            background-color: #86A3c3;
+            padding: 20px;
+        }
+
+
+        #notes {
+            float: right;
+            margin: 50px;
+            background-color: #7268A6;
+            border-radius: 10px;
+            padding: 20px;
+            width: 400px;
+        }
+
+        textarea,
+        input {
+            display: block;
+            width: 100%;
+            
+        }
+
+        input {
+            height: 36px;
+            font-size: 24px;
+        }
+
+        textarea {
+            height: 200px;
+            font-size: 18px;
+        }
+
+        .navbar {
+            background-color: #6B3074;
+            color:antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav style="background-color: #6B3074; color:whitesmoke;" class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <h1>Fit To Scrape App</h1>
+        </a>
+    </nav>
+
+
+    <div class="container">
+        <div class="row">
+            <div id="holder">
+                <h2>Nice articles</h2>
+                <div id="articles"></div>
+            </div>
+
+            <div id=thisisnote>
+                <div id="notes"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
